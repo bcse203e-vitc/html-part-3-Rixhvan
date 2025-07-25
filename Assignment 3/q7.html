@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Booking Form</title>
+</head>
+<body>
+  <h1>Travel Booking</h1>
+  <form action="/submit-booking" method="post">
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <label for="contact">Contact Information:</label><br>
+    <input type="text" id="contact" name="contact" required><br><br>
+
+    <label for="destination">Destination:</label><br>
+    <select id="destination" name="destination" required>
+      <option value="" disabled selected>Select destination</option>
+      <option value="paris">Paris</option>
+      <option value="newyork">New York</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="sydney">Sydney</option>
+    </select><br><br>
+
+    <label for="startdate">Travel Start Date:</label><br>
+    <input type="date" id="startdate" name="startdate" required><br><br>
+
+    <label for="enddate">Travel End Date:</label><br>
+    <input type="date" id="enddate" name="enddate" required><br><br>
+
+    <label for="travelers">Number of Travelers:</label><br>
+    <input type="number" id="travelers" name="travelers" min="1" required><br><br>
+
+    <label>Travel Class:</label><br>
+    <input type="radio" id="economy" name="class" value="economy" required>
+    <label for="economy">Economy</label>
+    <input type="radio" id="business" name="class" value="business">
+    <label for="business">Business</label>
+    <input type="radio" id="first" name="class" value="first">
+    <label for="first">First Class</label><br><br>
+
+    <input type="checkbox" id="insurance" name="insurance">
+    <label for="insurance">Opt for travel insurance</label><br><br>
+
+    <label for="cost">Total Cost (to be calculated manually):</label><br>
+    <input type="text" id="cost" name="cost" readonly><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
